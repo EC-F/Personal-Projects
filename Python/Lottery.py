@@ -18,17 +18,15 @@ def GenerateWinSets(AmountWinners,SharedNumbersToggle):
 
 print("---- 6 Number Lottery Generator ----")
 WinSetAmount = int(input("How many winning sets do you wish to generate? - "))
-ShareBetweenSets = input("Share Number Pool between sets? (0-99) S/N - ")
+ShareBetweenSets = input("Share Number Pool between sets? (0-99) Y/N - ")
 
 match ShareBetweenSets:
-    case "S":
+    case "Y":
         SharedNumbersToggle = True
         print(GenerateWinSets(WinSetAmount,SharedNumbersToggle))
     case "N":
         SharedNumbersToggle = False
         print(GenerateWinSets(WinSetAmount,SharedNumbersToggle))
     case _:
-        print("Please input only a S / N")
+        print("Please input only a Y / N")
 input()
-
-
